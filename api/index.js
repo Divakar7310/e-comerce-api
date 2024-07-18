@@ -14,9 +14,8 @@ app.use(express.json());
 mongoose.connect("mongodb+srv://greatstack:greatstack@cluster0.k3skldq.mongodb.net/e-commerc", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false
 });
+
 
 // API Creation
 app.get("/", (req, res) => {
