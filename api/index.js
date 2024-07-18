@@ -15,6 +15,7 @@ mongoose.connect("mongodb+srv://greatstack:greatstack@cluster0.k3skldq.mongodb.n
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
+  useFindAndModify: false
 });
 
 // API Creation
