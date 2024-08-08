@@ -7,11 +7,12 @@
     "start": "node api/index.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.10.9",
     "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
     "multer": "^1.4.2",
     "path": "^0.12.7",
-    "cors": "^2.8.5"
+    "portfinder": "^1.0.32"
   }
 }

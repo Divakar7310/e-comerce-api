@@ -1,4 +1,6 @@
 const port = process.env.PORT || 4000;
+const portfinder = require('portfinder');
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -262,5 +264,15 @@ app.post('/getcart', fetchUser, async (req, res) => {
   let userData = await Users.findOne({ _id: req.user.id });
   res.json(userData.cartData);
 });
+
+portfinder.getPortPromise()
+  .then((port) => {
+    app.listen(port, () => {
+      console.log(`Example app listening on port ${port}`);
+    });
+  })
+  .catch((err) => {
+    console.error('Error finding port:', err);
+  });
 
 module.exports = app;
